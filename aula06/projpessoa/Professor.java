@@ -1,42 +1,19 @@
 package projpessoa;
 
-public class Professor extends Pessoa {
-    
-    private String titulo;
-    private String instituicao;
+public class Professor extends Pessoa{
+    private String titulo, instituicao;
     private float salario;
 
-    public Professor(String nome, String endereco, String telefone, String titulo, String instituicao, float salario){
-        super(nome, endereco, telefone);
-        this.titulo = titulo;
+    public Professor(String nome, String ender, String tel, String titulo, String instituicao, float salario){
+        super(nome, ender, tel);
         this.instituicao = instituicao;
+        this.titulo = titulo;
         this.salario = salario;
     }
 
-    public String getTitulo() {
-        return titulo;
+    @Override
+    public String exibirDados(){
+        return super.exibirDados() + " - Titulo: " + titulo;
     }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getInstituicao() {
-        return instituicao;
-    }
-
-    public void setInstituicao(String instituicao) {
-        this.instituicao = instituicao;
-    }
-
-    public float getSalario() {
-        return salario;
-    }
-
-    public void setSalario(float salario) {
-        this.salario = salario;
-    }
-
-    
 
 }

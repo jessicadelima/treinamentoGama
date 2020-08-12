@@ -22,12 +22,10 @@ public abstract class Conta {
     //métodos abstratos devem ser obrigatoriamente escritos nas classes derivadas
     public abstract String exibir();
 
-    public boolean depositar(double valor) {
+    public void depositar(double valor) {
         if (valor > 0) {
             saldo = saldo + valor;
-            return true;
         }
-        return false;
     }
 
     public boolean saque(double valor) {

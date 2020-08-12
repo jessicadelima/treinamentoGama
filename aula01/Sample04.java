@@ -1,26 +1,28 @@
 public class Sample04 {
-    
+
     public static void main(String[] args) {
-        //conversão de tipo de dados
 
-        int numerointeiro;
-        float numerofloat;
+        //conversão de tipos de dados
 
-        numerointeiro = 230;
+        int numeroInteiro;
+        float numeroFloat;
 
-        //armazenar um tipo menor em um maior sem problema
-        numerofloat = numerointeiro;
+        numeroInteiro = 230;
 
-        //armazenar um tipo maior em um tipo menor não funciona
-        //numerointeiro = numerofloat;
+        //armazenar um tipo menor em um tipo maior, sem problema
+        numeroFloat = numeroInteiro;
 
-        numerofloat = 7.99999f; //f para dizer que é float
+        //armazenar um tipo maior em um tipo menor, não funciona
+        //numeroInteiro = numeroFloat;
+
+        numeroFloat = 7.9999f; // f para dizer que é float
         //casting: força uma conversão de tipo com possível perda de precisão
         //não tem arredondamento
-        numerointeiro = (int)numerofloat;
+        numeroInteiro = (int)numeroFloat;
 
-        System.out.println(numerointeiro);
-        System.out.println(numerofloat);
+        System.out.println(numeroInteiro);
+        System.out.println(numeroFloat);
+        
     }
-
+    
 }

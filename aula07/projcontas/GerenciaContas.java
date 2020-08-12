@@ -6,15 +6,15 @@ public class GerenciaContas {
 
     private ArrayList<Conta> listaContas;
 
-    public GerenciaContas(){
+    public GerenciaContas() {
         listaContas = new ArrayList<>();
     }
 
-    public void novaConta(Conta conta){
+    public void novaConta(Conta conta) {
         listaContas.add(conta);
     }
 
-    public String getInfo(int numeroConta){
+    public String getInfo(int numeroConta) {
         for (Conta c : listaContas) {
             if (c.getNumero() == numeroConta) {
                 return c.exibir();
@@ -23,30 +23,27 @@ public class GerenciaContas {
         return ("Conta não encontrada.");
     }
 
-    public String fazSaque(int numeroConta, double valor){
+    public String efetuarSaque(int numeroConta, float valor) {
         for (Conta c : listaContas) {
             if (c.getNumero() == numeroConta) {
-                if (c.saque(valor)){
-                    return ("Saque efetuado com sucesso!");
+                if (c.saque(valor)) {
+                    return ("Saque efetuado.");
                 } else {
-                    return("Saque não efetuado!");
+                    return ("Saque não efetuado.");
                 }
             }
         }
-        return ("Conta não encontrada!");
+        return ("Conta não encontrada.");
     }
 
-    public String fazDeposito(int numeroConta, double valor){
+    public boolean efetuarDeposito(int numeroConta, float valor){
         for (Conta c : listaContas) {
             if (c.getNumero() == numeroConta) {
-                if (c.depositar(valor)){
-                    return ("Depósito efetuado com sucesso!");
-                } else {
-                    return("Depósito não efetuado!");
-                }
+                c.depositar(valor);
+                return true;
             }
         }
-        return ("Conta não encontrada!");
-    }
+        return false;
+    } 
 
 }

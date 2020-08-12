@@ -1,0 +1,9 @@
+
+
+
+
+cd C:\Users\007696206\Desktop\treinamento\aula12\testeheroku
+
+heroku git:remote -a dev-turma6b-jessica
+
+git push heroku master

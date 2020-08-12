@@ -6,9 +6,9 @@ public class AppContas {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int numeroConta;
-        double valor, limite;
+        float valor, limite;
         int opcao;
-        
+
         GerenciaContas contas = new GerenciaContas();
 
         do {
@@ -32,6 +32,7 @@ public class AppContas {
                 case 2:
                     System.out.println("Informe o número da poupança:");
                     numeroConta = in.nextInt();
+
                     contas.novaConta(new ContaCorrente(numeroConta));
                     break;
 
@@ -39,7 +40,7 @@ public class AppContas {
                     System.out.println("Informe o número da conta especial:");
                     numeroConta = in.nextInt();
                     System.out.println("Informe o limite:");
-                    limite = in.nextDouble();
+                    limite = in.nextFloat();
                     contas.novaConta(new ContaEspecial(numeroConta, limite));
                     break;
 
@@ -53,16 +54,21 @@ public class AppContas {
                     System.out.println("Informe o número da conta:");
                     numeroConta = in.nextInt();
                     System.out.println("Digite o valor do saque:");
-                    valor = in.nextDouble();
-                    System.out.println(contas.fazSaque(numeroConta, valor));
+                    valor = in.nextFloat();
+                    System.out.println(contas.efetuarSaque(numeroConta, valor));
                     break;
 
                 case 6:
                     System.out.println("Informe o número da conta:");
                     numeroConta = in.nextInt();
                     System.out.println("Digite o valor do depósito:");
-                    valor = in.nextDouble();
-                    System.out.println(contas.fazDeposito(numeroConta, valor));
+                    valor = in.nextFloat();
+
+                    if (contas.efetuarDeposito(numeroConta, valor)) {
+                        System.out.println("Deposito realizado.");
+                    }else{
+                        System.out.println("Conta não encontrada.");
+                    }
                     break;
 
                 case 7:

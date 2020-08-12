@@ -1,49 +1,42 @@
 package projpessoa;
 
-public class Estudante extends Pessoa{
+public class Estudante extends Pessoa {
+    
     private int ra;
     private String curso;
     private int anoGraduacao;
-    
-    public Estudante(String nome, String endereco, String telefone, int ra, String curso, int anoGraduacao){
-        super(nome, endereco, telefone);
-        this.ra = ra;
-        this.curso = curso;
-        this.anoGraduacao = anoGraduacao;
-    }
 
     public Estudante(){
-        
+
     }
 
-    public int getRa() {
+    public Estudante(String nome, String ender, String tel, int ra, String curso, int anoGraducao){
+        super(nome, ender, tel);
+        this.ra = ra;
+        this.curso = curso;
+        this.anoGraduacao = anoGraducao;
+    }
+
+
+    public int getRa(){
         return ra;
     }
 
-    public void setRa(int ra) {
+    public void setRa(int ra){
         this.ra = ra;
     }
 
-    public String getCurso() {
+    public String getCurso(){
         return curso;
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
-    }
-
-    public int getAnoGraduacao() {
+    public int getAnoGraduacao(){
         return anoGraduacao;
-    }
-
-    public void setAnoGraduacao(int anoGraduacao) {
-        this.anoGraduacao = anoGraduacao;
     }
 
     @Override
     public String exibirDados(){
-        return super.exibirDados() + " - " + ra + " - "+ curso + " - "+ anoGraduacao;
+        return super.exibirDados() + " - RA: " + ra;
     }
-
     
 }

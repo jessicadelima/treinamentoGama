@@ -4,25 +4,23 @@ import java.util.Scanner;
 
 public class Uri1035 {
     public static void main(String[] args) {
-        
-        Scanner entrada = new Scanner(System.in);
-        int a,b,c,d;
-        boolean teste;
+        Scanner in = new Scanner( System.in );
+        int a, c, b, d;
+        boolean valido;
 
-        a = entrada.nextInt();
-        b = entrada.nextInt();
-        c = entrada.nextInt();
-        d = entrada.nextInt();
+        a = in.nextInt();
+        b = in.nextInt();
+        c = in.nextInt();
+        d = in.nextInt();
 
-        entrada.close();
+        valido = (b > c) && (d > a) && (c + d > a + b ) && ( c > 0 && d > 0 ) && ( a % 2 == 0 );
 
-        teste = ((b>c) && (d>a) && ((c+d)>(a+b)) && (c>=0) && (d>=0) && (a%2==0));
-
-        if (teste) {
+        if(valido){
             System.out.println("Valores aceitos");
-        } else {
+        }else{
             System.out.println("Valores nao aceitos");
         }
 
+        in.close();
     }
 }

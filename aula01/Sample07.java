@@ -1,34 +1,36 @@
 import java.util.Scanner;
 
 public class Sample07 {
+
     public static void main(String[] args) {
         
-        Scanner entrada = new Scanner(System.in);
-
+        Scanner entrada = new Scanner( System.in );
         String entradaDigitada;
+
         String nome;
         int idade;
         float peso;
 
-        //pegar toda a entrada como texto e converter depois para as variáveis
-        //para não ter problema de perder dados no cache
+        System.out.println("Digite a sua idade:");
+        entradaDigitada = entrada.nextLine(); //leitura em formato de texto
+        idade = Integer.parseInt(entradaDigitada); //converte o texto lido para número inteiro
+
+        //idade = entrada.nextInt();
 
         System.out.println("Digite o seu nome:");
-        entradaDigitada = entrada.nextLine();
-        nome = entradaDigitada;
-
-        System.out.println("Digite a sua idade:");
-        entradaDigitada = entrada.nextLine();
-        idade = Integer.parseInt(entradaDigitada);
+        nome = entrada.nextLine();
 
         System.out.println("Digite o seu peso:");
-        entradaDigitada = entrada.nextLine();
-        peso = Float.parseFloat(entradaDigitada);
+        entradaDigitada = entrada.nextLine(); //leitura em formato de texto
+        peso = Float.parseFloat(entradaDigitada);//converte o texto lido para número float
 
-        System.out.println("Olá "+nome+"!");
-        System.out.println("Você tem "+idade+" anos.");
-        System.out.println("Você tem "+peso+" Kg.");
+        //peso = entrada.nextFloat();
+
+        System.out.println("Olá " + nome);
+        System.out.println("Você tem " + idade + " anos.");
+        System.out.println("Você tem " + peso + " Kg.");
 
         entrada.close();
     }
+    
 }

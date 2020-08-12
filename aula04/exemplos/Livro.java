@@ -1,3 +1,4 @@
+package exemplos;
 
 /**
  * Livro
@@ -10,6 +11,16 @@ public class Livro {
     String autor;
     int numeroPaginas;
     boolean disponivel;
+
+    //método construtor: iniciliza os atributos do objeto
+    //ele tem o mesmo nome da classe
+    public Livro(String titulo,String editora,String autor, int numeroPaginas){
+        this.titulo = titulo;
+        this.editora = editora;
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
+        this.disponivel = true;
+    }
 
     //métodos do livro: ações ou comportamentos do livro
     public void emprestar(){
@@ -24,9 +35,33 @@ public class Livro {
         return disponivel;
     }
 
-    //criar um método para exibir os dados de um livro
 
+    public int obterPaginas(){
+        return numeroPaginas;
+    }
+
+    //criar um método para exibir os dados de um livro
     public void exibirDados(){
-        System.out.println("Título:" + titulo + "\nEditora: "+ editora + "\nAutor: "+ autor + "\nNúmero de Páginas: "+ numeroPaginas);
+        String disponibilidade;
+
+        if(disponivel){
+            disponibilidade = "disponível";
+        }else{
+            disponibilidade = "não disponível";
+        }
+        
+        System.out.println("Livro: " + titulo + " : " + autor + ", " + editora + "-" + numeroPaginas + " (" + disponibilidade + ")");
+    }
+
+    public String getDados(){
+        String disponibilidade;
+
+        if(disponivel){
+            disponibilidade = "disponível";
+        }else{
+            disponibilidade = "não disponível";
+        }
+        
+         return "Livro: " + titulo + " : " + autor + ", " + editora + "-" + numeroPaginas + " (" + disponibilidade + ")";
     }
 }

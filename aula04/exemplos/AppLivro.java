@@ -1,24 +1,48 @@
+package exemplos;
+
+import java.util.Scanner;
+
 public class AppLivro {
-
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String titulo;
 
-        Livro livro = new Livro();
+        System.out.println("Informe o título do livro:");
+        titulo = in.nextLine();
+        Livro livro1 = new Livro(titulo, "LTC", "Deitel", 457);
 
-        livro.titulo = "Programação com Java";
-        livro.autor = "Deitel";
-        livro.disponivel = true;
+        System.out.println("Informe o título do livro:");
+        titulo = in.nextLine();
+        Livro livro2 = new Livro(titulo, "Alta Books", "Silbershatz", 300);
 
-        livro.emprestar();
-        livro.exibirDados();
+        livro1.emprestar();
 
-        boolean possoEmprestar = livro.estaDisponivel();
+        boolean possoEmprestar = livro1.estaDisponivel();
 
-        if(possoEmprestar){
-            System.out.println("O livro " + livro.titulo + " está disponível");
-        }else{
-            System.out.println("O livro " + livro.titulo + " não está disponível");
-
+        if (possoEmprestar) {
+            System.out.println("O livro " + livro1.titulo + " está disponível");
+        } else {
+            System.out.println("O livro " + livro1.titulo + " não está disponível");
         }
-    }
 
+        if (livro2.estaDisponivel()) {
+            System.out.println("O livro " + livro2.titulo + " está disponível");
+        } else {
+            System.out.println("O livro " + livro2.titulo + " não está disponível");
+        }
+
+        System.out.println("Livros cadastrados:");
+        livro1.exibirDados();
+        livro2.exibirDados();
+
+        String saida = livro1.getDados();
+        System.out.println(saida);
+        System.out.println(livro2.getDados());
+
+        System.out.println("Número de páginas dos livros");
+        System.out.println(livro1.titulo + " - " + livro1.obterPaginas() + " páginas.");
+        System.out.println(livro2.titulo + " - " + livro2.obterPaginas() + " páginas.");
+
+        in.close();
+    }
 }

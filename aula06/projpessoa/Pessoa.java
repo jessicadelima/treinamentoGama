@@ -1,49 +1,52 @@
 package projpessoa;
 
 /**
- * Super classe Pessoa
+ * Pessoa
  */
-public class Pessoa {
+public class Pessoa /* extends Object */{ //todas as classes herdam de Object
 
-    private String nome;
-    private String endereco;
-    private String telefone;
-
-    public Pessoa(String nome, String endereco, String telefone){
-        this.nome = nome;
-        this.endereco = endereco;
-        this.telefone = telefone;
-    }
+    private String nome, ender, tel;
 
     public Pessoa(){
 
+    }
+    
+    public Pessoa(String nome, String ender, String tel){
+        this.nome = nome;
+        this.ender = ender;
+        this.tel = tel;
     }
 
     public String getNome(){
         return nome;
     }
 
-    public String getEndereco(){
-        return endereco;
-    }
-
-    public String getTelefone(){
-        return telefone;
-    }
-
     public void setNome(String nome){
         this.nome = nome;
     }
 
-    public void setEndereco(String endereco){
-        this.endereco = endereco;
+    public String getEnder(){
+        return ender;
     }
 
-    public void setTelefone(String telefone){
-        this.telefone = telefone;
+    public void setEnder(String ender){
+        this.ender = ender;
     }
 
-    public String exibirDados(){
-        return nome+" - "+endereco+" - "+telefone;
+    public String getTelefone(){
+        return tel;
+    }
+
+    public void setTelefone( String tel){
+        this.tel = tel;
+    }
+
+    protected String exibirDados(){
+        return nome + " - " + ender + " - " + tel;
+    }
+
+    @Override
+    public String toString() {
+        return exibirDados();
     }
 }

@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Sample06 {
+    
     public static void main(String[] args) {
-        
-        Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner( System.in );
 
         int idade;
         float peso;
@@ -14,8 +14,8 @@ public class Sample06 {
         System.out.println("Digite o seu peso:");
         peso = entrada.nextFloat();
 
-        System.out.println("Você tem "+idade+" anos.");
-        System.out.println("Você tem "+peso+" Kg.");
+        System.out.println("Você tem " + idade + " anos.");
+        System.out.println("Você tem " + peso + " Kg.");
 
         entrada.close();
     }

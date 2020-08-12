@@ -1,15 +1,17 @@
+/**
+ * Sample03
+ */
 public class Sample03 {
-    
+
     public static void main(String[] args) {
-        
-        //variável: área de memória para validar informações
+        // variável: área de memória pra guardar informações
 
         int idade;
 
-        idade = 30; // atribui o valor 30 a variável idade
-        idade = (30*2); //
+        idade = 30; // armazena o valor 30 dentro da variável idade
 
-        System.out.println("A idade é:"+idade);
+        idade = (30 * 2); // sobrescreve o valor com o resultado calculado
+
+        System.out.println("A idade é: " + idade);
     }
-
 }

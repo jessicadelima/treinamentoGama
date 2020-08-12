@@ -4,30 +4,23 @@ public class Exercicio04 {
     public static void main(String[] args) {
         
         Scanner entrada = new Scanner(System.in);
+        double salarioMinimo, quantidadeKW, valorPorKW, valorConta ;
+        final float desconto = 0.15f;
+        final float porcentagemKW = ( 1.0f / 500);
 
-        float salario;
-        int quilowatt;
-        float v_quilowatt;
-        float v_consumo;
+        System.out.println("Informe o valor do salário mínimo: ");
+        salarioMinimo = entrada.nextDouble();
+        System.out.println("Qual a quanitdade de KW consumido:");
+        quantidadeKW = entrada.nextDouble();
 
-        System.out.println("Digite o valor do salário mínimo:");
-        salario = entrada.nextFloat();
+        valorPorKW = salarioMinimo *  porcentagemKW;
 
-        System.out.println("Digite a quantidade de quilowatts consumida:");
-        quilowatt = entrada.nextInt();
+        valorConta = valorPorKW * quantidadeKW;
+
+        System.out.println("Valor por KW: " + valorPorKW);
+        System.out.println("Valor a ser pago: " + valorConta);
+        System.out.println("Valor com desconto: " + (valorConta - valorConta * desconto) );
 
         entrada.close();
-
-        v_quilowatt = salario*(1/500);
-        v_consumo = (float)(quilowatt*v_quilowatt);
-
-        System.out.println("Valor de 1 quilowatt: R$ "+v_quilowatt);
-        System.out.println("Valor total do consumo ("+quilowatt+" quilowatts): R$ "+v_consumo);
-        System.out.println("Valor a ser pago com desconto de 15%: R$ "+(v_consumo*0.85));
-
-
-
-
-
     }
 }
