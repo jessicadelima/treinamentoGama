@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/css/estilo.css">
-
-    <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
-    <div class="container h-100 d-flex"> <!-- ocupar toda a página, centralizada na vertical -->
-        <div class="row w-100 align-items-center"> <!-- ocupa toda a largula centralizando o conteúdo -->
-            <div class="col-8 mx-auto"> <!-- uma única coluna ocupando 8 dos 12 espaços, centralizada  -->
 
-                <div class="jumbotron">
-                    <div class="row"> 
-                        <div class="col">
-                            <div class="text-center" id="msgErro"></div>
-                        </div>
-                    </div>
-
-                    <form>
-                        <input class="form-control" type="text" id="txtUsuario" placeholder="email/racf">
-                        <input class="form-control" type="password" id="txtSenha" placeholder="senha">
-                        <div class="col text-center">
-                            <button class="btn btn-outline-primary" onclick="autenticar(event)"> Login</button>
-                        </div>
-                    </form>
+<br><br>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <!-- //lado esquerdo -->
+          </div>
+          <div class="col-sm">
+           
+            <div class="jumbotron" style="margin-bottom: 0px; padding: 16px;">
+                <div class="row justify-content-center">
+                    <img src="/img/itaulogo.png" width="20%" alt="">
                 </div>
+                <p class="text-center">Portal Itaú Unibanco<br><bm>Consulta de Agendamento</bm></p>
+                <div class="col" id="msgErro"></div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email ou RACF:</label>
+                      <input type="text" class="form-control" id="txtUsuario" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Senha:</label>
+                      <input type="password" class="form-control" id="txtSenha">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Continuar logado</label>
+                    </div> 
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-outline-primary" onclick="autenticar(event)">Acessar</button>
+                    </div>
+                  </form>
+               
 
-            </div>
+              </div>
+
+
+          </div>
+          <div class="col-sm">
+            <!-- lado direito -->
+          </div>
         </div>
-    </div>
+      </div>
+
+    
+    
+    
 </body>
+
+<script src="./js/login.js"></script>
 </html>

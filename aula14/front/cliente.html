@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendApp Itaú</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="/js/cliente.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/estilocliente.css">
+
+</head>
+
+<body onload="obterAgencias()">
+    <div class="container h-100 d-flex">
+        <!-- ocupar toda a página, centralizada na vertical -->
+        <div class="row w-80 align-items-center">
+            <!-- ocupa toda a largula centralizando o conteúdo -->
+            <div class="col-18 mx-auto">
+                <!-- uma única coluna ocupando 8 dos 12 espaços, centralizada  -->
+
+            </div>
+
+            <form>
+
+                    <label for="nome">Nome:</label>
+                    <input type="nome" class="form-control" id="txtNome" placeholder="Nome completo">
+
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="txtEmail" placeholder="nome@exemplo.com">
+                    
+                    <label for=celular">Celular/WhatsApp:</label>
+                    <input type="celular" class="form-control" id="txtCelular" placeholder="(DDD) 1234-5678">
+                    
+                    <label for="data">Selecione a data:</label>
+                    <input type="date" class="form-control" id="txtData">
+
+                    <label for="inputAgencia">Agência:</label>
+                    <select id="sel_agencias" class="form-control"></select>
+
+                    <label for="horainicio">Horário Início:</label>
+                    <input type="time" class="form-control" id="txtHora">
+
+                     
+                    <div class="col text-center">
+                        <button class="btn btn-outline-primary" onclick="agendar(event)">
+                            Agendar</button>
+                    </div>
+            </form>
+        </div>
+
+</body>
+
+</html>

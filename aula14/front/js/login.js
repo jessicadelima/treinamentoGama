@@ -31,7 +31,7 @@ function tratarResposta (res){
     if(res.status == 200){ //usuário/senha válidos
         res.json().then(res => fazerLogin(res));
     }else{
-        document.getElementById("msgErro").innerHTML = "Usuário/Senha inválidos.";
+        document.getElementById("msgErro").innerHTML = "<div class='alert alert-danger' role='alert'>Usuário/Senha inválidos</div>";
     }
 }
 
