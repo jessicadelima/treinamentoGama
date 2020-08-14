@@ -50,8 +50,8 @@ function agendar(event) {
 
 function tratarResposta (res){
     if(res.status == 200){ //cadastro realizado com sucesso
-        alert("Cadastro realizado com sucesso! Não se esqueça de usar a máscara!");
+        document.getElementById("msgErro2").innerHTML = "<div class='alert alert-success' role='success'>Cadastro realizado com sucesso! Não se esqueça de usar a máscara!</div>";
     }else{
-        alert("Falha no agendamento! Tente novamente!");
+        document.getElementById("msgErro2").innerHTML = "<div class='alert alert-danger' role='alert'>Falha no agendamento! Tente novamente!</div>";
     }
 }
