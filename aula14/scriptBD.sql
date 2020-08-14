@@ -33,3 +33,21 @@ create table itmn032_agendamento(
    constraint pk_agendamento primary key (num_seq),
    constraint fk_agencia foreign key (id_agencia) references itmn032_agencia(id)
 );
+
+insert into itmn032_usuario values(
+null,
+'emerson@paduan.pro.br',
+'https://hennesseyonline.com/wp-content/uploads/2015/05/staff-placeholder-male.jpg',
+'Emerson Paduan',
+'1234567',
+'1234'
+);
+
+insert into itmn032_agencia values(null, 'Agencia 01', 9, 15);
+insert into itmn032_agencia values(null, 'Agencia 02', 10, 16);
+insert into itmn032_agencia values(null, 'Agencia 03', 10, 15);
+insert into itmn032_agencia values(null, 'Agencia 04', 9, 14);
+
+insert into itmn032_agendamento values(null,'Carlos','carlos@it.com','987655678','2020-08-13','110000','',4);
+insert into itmn032_agendamento values(null,'Marcos','marcos@it.com','977771111','2020-08-18','111500','',4);
+insert into itmn032_agendamento values(null,'Marilia','marilia@it.com','955552222','2020-08-10','113000','',5);

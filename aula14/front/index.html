@@ -13,32 +13,28 @@
 
 </head>
 <body>
-    <div class="container h-100 d-flex"> <!--ocupar toda a pagina de forma centralizada-->
-        <div class="row w-100 align-items-center"> <!--ocupa toda a largura centralizando o conteúdo-->
-            <div class="col-8 mx-auto"> <!--uma única coluna centralizada ocupando 8 das 12 espaços -->
+    <div class="container h-100 d-flex"> <!-- ocupar toda a página, centralizada na vertical -->
+        <div class="row w-100 align-items-center"> <!-- ocupa toda a largula centralizando o conteúdo -->
+            <div class="col-8 mx-auto"> <!-- uma única coluna ocupando 8 dos 12 espaços, centralizada  -->
+
                 <div class="jumbotron">
-                    <div class="row">
+                    <div class="row"> 
                         <div class="col">
                             <div class="text-center" id="msgErro"></div>
                         </div>
                     </div>
 
                     <form>
-                        <input class="form-control" type="text" id="txtUsuario" placeholder="Email/Racf">
-                        <input class="form-control" type="password" id="txtSenha" placeholder="Senha">
+                        <input class="form-control" type="text" id="txtUsuario" placeholder="email/racf">
+                        <input class="form-control" type="password" id="txtSenha" placeholder="senha">
                         <div class="col text-center">
-                            <button class="btn btn-outline-primary" onclick="autenticar(event)">Login</button>
+                            <button class="btn btn-outline-primary" onclick="autenticar(event)"> Login</button>
                         </div>
                     </form>
-
                 </div>
 
             </div>
-
-
         </div>
-
-
     </div>
 </body>
 </html>
