@@ -38,7 +38,7 @@ public class AgendamentoController {
 
     @GetMapping("/agendamentos/cliente/{nomeCliente}")
     public List<Agendamento> getAgendamentos(@PathVariable String nomeCliente){
-        List<Agendamento> agendamento = (List<Agendamento>)dao.findAllByNome(nomeCliente);
+        List<Agendamento> agendamento = (List<Agendamento>)dao.findAllByNomeContaining(nomeCliente);
         return agendamento;
     }
 
@@ -51,6 +51,11 @@ public class AgendamentoController {
     
     }
 
+    @GetMapping("/agendamentos/todos")
+    public List<Agendamento> getNomeAndAgencia(@RequestParam(name="cliente") String nomeCliente, @RequestParam(name="agencia") int agenciaId){
+        return dao.findAllByNomeAndAgenciaId(nomeCliente, agenciaId);
+    }
+    
     @PostMapping("/agendamentos/novo")
 	public ResponseEntity<Agendamento> novoAgendamento(@RequestBody Agendamento agendamento) {
         try {
